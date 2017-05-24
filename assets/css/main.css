@@ -1,0 +1,13 @@
+body{
+	margin:0px;/*para que navbar se ajuste al borde del navegador*/
+	background-color:#dcafdc;
+	font-family: 'Roboto', sans-serif;
+}
+
+li{
+		list-style:none;/*así no muestran símbolo que listas tienen por defecto*/
+}
+
+.dropdown-content{
+	display: inline-block;/*links de manera horizontal*/
+}

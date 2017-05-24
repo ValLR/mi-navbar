@@ -1,13 +1,54 @@
 body{
 	margin:0px;/*para que navbar se ajuste al borde del navegador*/
+
+}
+
+ul{
+	list-style:none;/*así no muestran símbolo que listas tienen por defecto*/
+	margin:0;
+	padding:0;
+	overflow:auto;
 	background-color:#dcafdc;
 	font-family: 'Roboto', sans-serif;
 }
 
-li{
-		list-style:none;/*así no muestran símbolo que listas tienen por defecto*/
+ul li{
+	display: inline-block;/*links de manera horizontal*/
+}
+ul li a{
+	display:inline-block;
+	text-decoration:none;/*fuera subrayado*/
+	color:whitesmoke;
+	text-align:center;
+	padding:26px;/*más espacio*/
+	text-decoration:none;
+}
+li a:hover, .dropdown:hover/*only this y solo se ilumina por caja*/, .dropbtn:hover/*con esto, se ilumina todo el conjunto Y el texto*/{
+	/*cambios al hover sobre el enlace, que cambie color de background y texto*/
+	background-color:pink;
+	color:lightgreen;
 }
 
-.dropdown-content{
-	display: inline-block;/*links de manera horizontal*/
+.dropdown-content/*contiene los estilos del contenedor de enlaces que se
+desplegarán en la pantalla cuando pasemos el cursor*/{
+	display:none;/*y paf! al principio no se ven los links de la lista desplegable*/
+	position:absolute;
+	background-color:lightgrey;
+	min-width:180px;
+	box-shadow:0px 8px 16px 9px #8ecfcb;
+	z-index:1;
+}
+
+.dropdown-content a{
+	color:white;
+	padding:12px 16px;
+	text-decoration: none;
+	display:block;
+	text-align:center;
+}
+.dropdown-content a:hover {
+	background-color: #f7bab5;
+}
+.dropdown:hover .dropdown-content{
+	display:block;
 }
